@@ -1,0 +1,6 @@
+c:\users\hp\source\repos\Mawulede\Mawulede_Models\bin\Debug\Mawulede_Models.dll
+c:\users\hp\source\repos\Mawulede\Mawulede_Models\bin\Debug\Mawulede_Models.pdb
+c:\users\hp\source\repos\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.csprojResolveAssemblyReference.cache
+c:\users\hp\source\repos\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.csproj.CoreCompileInputs.cache
+c:\users\hp\source\repos\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.dll
+c:\users\hp\source\repos\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.pdb

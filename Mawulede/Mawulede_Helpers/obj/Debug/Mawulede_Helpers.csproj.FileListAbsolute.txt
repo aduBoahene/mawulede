@@ -1,0 +1,12 @@
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\bin\Debug\Mawulede_Helpers.dll
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\bin\Debug\Mawulede_Helpers.pdb
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\bin\Debug\Npgsql.dll
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\bin\Debug\System.Threading.Tasks.Extensions.dll
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\bin\Debug\Npgsql.xml
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\bin\Debug\System.Threading.Tasks.Extensions.xml
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\obj\Debug\Mawulede_Helpers.csprojResolveAssemblyReference.cache
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\obj\Debug\Mawulede_Helpers.csproj.CoreCompileInputs.cache
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\obj\Debug\Mawulede_Helpers.dll
+c:\users\hp\source\repos\Mawulede\Mawulede_Helpers\obj\Debug\Mawulede_Helpers.pdb
+C:\Users\HP\source\repos\Mawulede\Mawulede_Helpers\bin\Debug\Mawulede_Models.dll
+C:\Users\HP\source\repos\Mawulede\Mawulede_Helpers\bin\Debug\Mawulede_Models.pdb
