@@ -44,10 +44,12 @@
     <Compile Include="ModelResponse\AjaxResponse.cs" />
     <Compile Include="ModelResponse\MovieResponse.cs" />
     <Compile Include="Model\Booking.cs" />
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Genre.cs" />
     <Compile Include="Model\House.cs" />
     <Compile Include="Model\Location.cs" />
     <Compile Include="Model\Movie.cs" />
+    <Compile Include="Model\PostMovie.cs" />
     <Compile Include="Model\Promotion.cs" />
     <Compile Include="Model\ShowMoment.cs" />
     <Compile Include="Model\User.cs" />

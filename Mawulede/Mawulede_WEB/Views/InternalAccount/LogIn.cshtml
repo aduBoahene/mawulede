@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_newLoginLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Log In";
+    ViewBag.Page = "LogIn";
+    ViewBag.Controller = "InternalAccount";
+
+    string returnUrl = ViewBag.ReturnURL;
+    if (returnUrl == null)
+    {
+        returnUrl = "/";
+    }
+}
+
+<div class="login-box">
+    <div class="login-logo">
+        <a href="../../index2.html"><b>Admin</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Enter Details</p>
+        <form method="post" action="/InternalAccount/LogIn?returnUrl=@returnUrl">
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="User Name" name="username" id="username">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="Password" name="password" id="password">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+
+
+            <div class="social-auth-links text-center">
+                <button type="submit" href="#" class="btn btn-block btn-social btn-google btn-flat" style="text-align:center">
+                    SIGN IN
+                </button>
+                @if (User.Identity.IsAuthenticated == true)
+            {
+                    <h5>Your current permissions do not grant access to this page, log in with a different account</h5>
+                }
+                @if (ViewBag.Error != null && ViewBag.Error != "")
+            {
+                    <span class="alert alert-warning">
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong>Error!</strong> @ViewBag.Error
+                    </span>
+                }
+            </div>
+            <!-- /.social-auth-links -->
+            <a href="#">I forgot my password</a><br>
+        </form>
+    </div>
+    
+    <!-- /.login-box-body -->
+</div>
+
+
+
+@section scripts {
+
+}
+

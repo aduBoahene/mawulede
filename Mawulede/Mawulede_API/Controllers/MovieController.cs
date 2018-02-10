@@ -1,10 +1,12 @@
 ﻿using Mawulede_Helpers;
 using Mawulede_Models.Model;
+using Mawulede_Models.ModelResponse;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -26,12 +28,12 @@ namespace Mawulede_API.Controllers
         }
 
         [HttpGet]
-        public List<Movie> GetAllMovie()
+        public List<Movie> GetAllMovie(int houseId)
         {
             var results = new List<Movie>();
             try
             {
-                results = _helper.GetAllMovie();
+                results = _helper.GetAllMovie(houseId);
                 if (results != null || results.Count > 0)
                 {
                     return results;
@@ -42,6 +44,38 @@ namespace Mawulede_API.Controllers
             catch (Exception x)
             {
                 return null;
+            }
+        }
+
+
+        [HttpPost]
+        public AjaxResponse PostMovie([FromBody]PostMovie newMovie)
+        {
+            try
+            {
+                int prod;
+                var httpRequest = HttpContext.Current.Request;
+                if (newMovie.Title!=null)
+                {
+                    prod = _helper.PostMovie(newMovie);
+                }
+
+                return new AjaxResponse
+                {
+                    Success = true,
+                    Response = "Transaction successful",
+
+                };
+            }
+            catch (Exception x)
+            {
+                //req.CreateResponse(HttpStatusCode.InternalServerError);
+                return new AjaxResponse
+                {
+                    Success = false,
+                    Response = "Request Failed",
+                    ExceptionMessage = x.ToString()
+                };
             }
         }
 

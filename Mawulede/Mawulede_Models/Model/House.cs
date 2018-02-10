@@ -7,7 +7,8 @@ namespace Mawulede_Models.Model
     public class House
     {
         public int HouseId { get; set; }
-        public String HouseName { get; set; }
-        public int LocationId { get; set; }
+        public string HouseName { get; set; }
+        public string LocationName { get; set; }
+        public string logoFilePath { get; set; }
     }
 }

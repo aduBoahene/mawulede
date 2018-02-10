@@ -1,4 +1,5 @@
-﻿<section class="content">
+﻿
+<section class="content">
     <!-- Info boxes -->
     <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
@@ -61,20 +62,37 @@
             <div class="box box-success">
                 <div class="box-header with-border">
                     <h3 class="box-title">Visitors Report</h3>
-                    <div class="box-tools pull-right">
-
-                    </div>
+                    
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body no-padding">
-                    <div class="row">
-                        <div class="col-md-9 col-sm-8">
-                            <div class="pad">
-                                <!-- Map will be created here -->
-                                <div id="world-map-markers" style="height: 325px;"></div>
+                    <div class="col-md-12">
+                        <div class="panel with-nav-tabs panel-primary">
+                            <div class="panel-heading">
+                                <ul class="nav nav-tabs">
+                                    <li class="active col-md-6" style="color:#000"><a href="#tab1primary" data-toggle="tab">Now Showing</a></li>
+                                    <li class="col-md-6"><a href="#tab2primary" data-toggle="tab" style="color:#000">Coming Soon</a></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="tab1primary">
+                                        <div class="media" id="movieBlock">
+                                            @*<div class="media-left">
+                                                <img src="img_avatar1.png" class="media-object" style="width:60px">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">Left-aligned</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>*@
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab2primary">Primary 2</div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                     <!-- /.row -->
                 </div>
@@ -99,12 +117,24 @@
                                     <th>Booking ID</th>
                                     <th>Movie</th>
                                     <th>Full Name</th>
-                                    <th>Phone</th>
+                                    <th>Date</th>
+                                    <th>Payment Method</th>
+                                    <th>Day</th>
+                                    <th>Time</th>
                                     <th>Amount</th>
-                                    <th>Paid From</th>
+
                                 </tr>
                             </thead>
-                            <tbody id="bookingDetails"></tbody>
+                            <tbody id="bookingDetails">
+                                @*<tr>
+                                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                    <td>Call of Duty IV</td>
+                                    <td><span class="label label-success">Shipped</span></td>
+                                    <td>
+                                        <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                                    </td>
+                                </tr>*@
+                            </tbody>
                         </table>
                     </div>
                     <!-- /.table-responsive -->
@@ -186,6 +216,15 @@
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">Latest Registrations</h3>
+                    <div class="user-block" id="custDetails">
+                        @*<img class="img-circle img-bordered-sm" src="~/Content/images/profile.jpg" />
+                        <span class="username">
+                            <a href="#">Jonathan Burke Jr.</a>
+                           
+                        </span>
+                        <span class="description">Shared publicly - 7:30 PM today</span>*@
+                    </div>
+
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -206,4 +245,7 @@
     </div>
     <!-- /.row -->
 </section>
-<script src="~/Scripts/index.js"></script>
+<script>
+    var HouseId =2;
+</script>
+<script src="~/Scripts/app/dashboardHome.js"></script>

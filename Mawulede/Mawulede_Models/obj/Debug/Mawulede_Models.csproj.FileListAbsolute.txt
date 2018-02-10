@@ -4,3 +4,9 @@ c:\users\hp\source\repos\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.cspr
 c:\users\hp\source\repos\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.csproj.CoreCompileInputs.cache
 c:\users\hp\source\repos\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.dll
 c:\users\hp\source\repos\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.pdb
+C:\Users\HP\Desktop\mawulede\Mawulede\Mawulede_Models\bin\Debug\Mawulede_Models.dll
+C:\Users\HP\Desktop\mawulede\Mawulede\Mawulede_Models\bin\Debug\Mawulede_Models.pdb
+C:\Users\HP\Desktop\mawulede\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\mawulede\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\mawulede\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.dll
+C:\Users\HP\Desktop\mawulede\Mawulede\Mawulede_Models\obj\Debug\Mawulede_Models.pdb
