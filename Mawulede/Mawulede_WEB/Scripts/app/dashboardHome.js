@@ -13,9 +13,15 @@ var booking = {};
 var Customers = {};
 var House = {};
 var Movie = {};
+var House = {};
 
 var bookingAjax = $.ajax({
     url: basrUrl + "Booking/GetAllBooking?houseId=" + HouseId,
+    type: "Get"
+});
+
+var houseAjax = $.ajax({
+    url: basrUrl + "House/GetOneHouseDetails?houseId=" + HouseId,
     type: "Get"
 });
 
@@ -37,12 +43,18 @@ var movieAjax = $.ajax({
 
 
 function loadData() {
-    $.when(bookingAjax, customerAjax, houseAjax, movieAjax)
-        .done(function (dataBooking, dataCustomer, dataHouse,dataMovie) {
+    $.when(bookingAjax, customerAjax, houseAjax, movieAjax, houseAjax)
+        .done(function (dataBooking, dataCustomer, dataHouse,dataMovie,dataHouse) {
             booking = dataBooking[2].responseJSON;
             Customers = dataCustomer[2].responseJSON;
             House = dataHouse[2].responseJSON;
             Movie = dataMovie[2].responseJSON;
+            House = dataHouse[2].responseJSON;
+
+            
+            var HouseName = House[0].HouseName;
+            console.log("val new", HouseName);
+            $("#houseName").text(HouseName);
 
 
             
@@ -78,17 +90,19 @@ function loadData() {
 
 
             for (var i = 0; i < Customers.length; i++) {
-
-                //outputCustomers = outputCustomers + "<img class='img-circle img-bordered-sm' src='Content/images/profile.jpg'/>\
-                outputCustomers = outputCustomers + "<img class='img-circle img-bordered-sm' src='Content/images/profile.jpg'/>\
+                outputCustomers = outputCustomers + " <div class='user-block'>\
+                    <img class='img-circle img-bordered-sm' src='Content/images/profile.jpg' />\
                     <span class='username'>\
                         <a href='#'>"+ Customers[i].FullName+"</a>\
                         </span>\
-                    <span class='description'>Shared publicly - 7:30 PM today</span>";
+                    <span class='description'>Shared publicly - 7:30 PM today</span>\
+                    </div>";
 
                 $("#custDetails").html(outputCustomers);
             }
         });
+    
+    
 
 
 

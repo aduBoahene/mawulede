@@ -25,13 +25,33 @@ namespace Mawulede_API.Controllers
         }
 
 
+        //[HttpGet]
+        //public List<House> GetAllCustomers(int houseId)
+        //{
+        //    var results = new List<House>();
+        //    try
+        //    {
+        //        results = _helper.GetAllHouses(houseId);
+        //        if (results != null || results.Count > 0)
+        //        {
+        //            return results;
+        //        }
+        //        else { return null; }
+
+        //    }
+        //    catch (Exception x)
+        //    {
+        //        return null;
+        //    }
+        //}
+
         [HttpGet]
-        public List<House> GetAllCustomers(int houseId)
+        public List<House> GetOneHouseDetails(int houseId)
         {
             var results = new List<House>();
             try
             {
-                results = _helper.GetAllHouses(houseId);
+                results = _helper.GetHouseDetail(houseId);
                 if (results != null || results.Count > 0)
                 {
                     return results;

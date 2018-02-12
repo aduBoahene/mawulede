@@ -129,6 +129,35 @@ namespace Mawulede_Helpers
             }
         }
 
+        public List<House> GetHouseDetail(int houseId)
+        {
+            using (var con = new NpgsqlConnection(_Ycon))
+            {
+                var results = new List<House>();
+
+                var cmd = new NpgsqlCommand("\"gethouse\"", con);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new NpgsqlParameter("reqHouseId", NpgsqlTypes.NpgsqlDbType.Integer));
+                cmd.Parameters[0].Value = houseId;
+
+                con.Open(); var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    results.Add(new House
+                    {
+                        HouseId = reader.GetFieldValue<int>(0),
+                        HouseName = reader.GetFieldValue<string>(1),
+                        LocationName = reader.GetFieldValue<string>(2),
+                        logoFilePath = reader.GetFieldValue<string>(3)
+                    });
+                }
+                con.Close(); con.Dispose();
+                return results;
+
+            }
+        }
+
 
 
         public List<Booking> GetAllBooking(int houseId)
