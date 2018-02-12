@@ -1118,6 +1118,7 @@
     <Content Include="Views\InternalAccount\LogIn.cshtml" />
     <Content Include="Views\Shared\_newLoginLayout.cshtml" />
     <Content Include="Views\Movie\AddMovie.cshtml" />
+    <Content Include="Views\Movie\EditMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -186,7 +186,8 @@ namespace Mawulede_Helpers
                         Amount = reader.GetFieldValue<string>(6),
                         HouseName = reader.GetFieldValue<string>(7),
                         Day = reader.GetFieldValue<string>(8),
-                        Time = reader.GetFieldValue<string>(9)
+                        Time = reader.GetFieldValue<string>(9),
+                        BookingNumber = reader.GetFieldValue<string>(10)
 
                     });
                 }

@@ -16,5 +16,6 @@ namespace Mawulede_Models.Model
         public String HouseName { get; set; }
         public String Day { get; set; }
         public string Time { get; set; }
+        public string BookingNumber { get; set; }
     }
 }

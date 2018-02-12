@@ -7,7 +7,11 @@ var outputMovie = "";
 
 $(function () {
     loadData();
+
+    
 });
+
+
 
 var booking = {};
 var Customers = {};
@@ -57,24 +61,22 @@ function loadData() {
             $("#houseName").text(HouseName);
 
 
-            
+
             for (var i = 0; i < Movie.length; i++) {
+                outputMovie = outputMovie + "<div class='col-md-4' class='movieClass' id='" + Movie[i].MovieId+"'>\
+                        <img src="+ Movie[i].PosterUrl + " class='media-object' style='width:70px;height:90px'>\
+                    </div>\
+                    <div class='col-md-4' style='margin-left:-240px'><h3>"+ Movie[i].Title + "</h3><p>" + Movie[i].Synopsis.substring(0, 100) + "</p>\
+                </div> ";    
 
-                outputMovie = outputMovie + "<div class='media-left'>\
-                        <img src='"+ Movie[i].PosterUrl+"' class='media-object' style='width:60px'></div>\
-                        <div class='media-body'>\
-                            <h4 class='media-heading'>"+Movie[i].Title+"</h4>\
-                            <p>"+ Movie[i].Synopsis+"</p>\
-                        </div>";
-
-                $("#movieBlock").html(outputMovie);
+                $("#tab1primary").html(outputMovie);
             }
 
-
+          
             for (var i = 0; i < booking.length; i++) {
 
                 outputBooking = outputBooking + "<tr>\
-                    <td> <a href=''>"+ booking[i].BookingId + "</a></td>\
+                    <td>"+ booking[i].BookingNumber + "</a></td>\
                     <td>"+ booking[i].Title + "</td>\
                     <td>"+ booking[i].FullName + "</td>\
                     <td>"+ booking[i].BookingDate + "</td>\
@@ -101,12 +103,21 @@ function loadData() {
                 $("#custDetails").html(outputCustomers);
             }
         });
-    
-    
 
 
+    //$(".test").live('click', function () {
+    //    alert('you clicked me!');
+    //});
 
+    //$(".movieClass").live('click', function () {
+    //    alert('you clicked me!');
+    //});
 
 }
+
+    $(".movieClass").live('click', function () {
+        alert('you clicked me!');
+    });
+
 
 

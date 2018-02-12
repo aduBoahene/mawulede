@@ -18,5 +18,10 @@ namespace Mawulede_WEB.Controllers
         {
             return View();
         }
+
+        public ActionResult EditMovie()
+        {
+            return View();
+        }
     }
 }
