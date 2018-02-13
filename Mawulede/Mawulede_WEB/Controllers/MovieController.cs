@@ -19,8 +19,17 @@ namespace Mawulede_WEB.Controllers
             return View();
         }
 
-        public ActionResult EditMovie()
+        public ActionResult EditMovie(int? id)
         {
+
+            if (id == null)
+            {
+                ViewBag.Id = 0;
+            }
+            else
+            {
+                ViewBag.Id = id.Value;
+            }
             return View();
         }
     }

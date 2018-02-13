@@ -63,14 +63,27 @@ function loadData() {
 
 
             for (var i = 0; i < Movie.length; i++) {
-                outputMovie = outputMovie + "<div class='col-md-4' class='movieClass' id='" + Movie[i].MovieId+"'>\
+                outputMovie = outputMovie + "\
+                    <div class='col-md-4 movieClass mag' id= '" + Movie[i].MovieId+"' >\
                         <img src="+ Movie[i].PosterUrl + " class='media-object' style='width:70px;height:90px'>\
                     </div>\
-                    <div class='col-md-4' style='margin-left:-240px'><h3>"+ Movie[i].Title + "</h3><p>" + Movie[i].Synopsis.substring(0, 100) + "</p>\
-                </div> ";    
+                    <div class='col-md-4 mag movieClass' style='margin-left:-240px'><h3>"+ Movie[i].Title + "</h3><p>" + Movie[i].Synopsis.substring(0, 100) + "</p>\
+                </div>";    
 
                 $("#tab1primary").html(outputMovie);
             }
+
+
+           
+
+            $(".movieClass").click(function () {
+               
+                var hymn = $(this).attr("id");
+                //console.log("tris", hymn);
+                alert('you clicked me!' + hymn);
+
+                window.location = "/Movie/EditMovie/"+ hymn;
+            });
 
           
             for (var i = 0; i < booking.length; i++) {
@@ -115,9 +128,7 @@ function loadData() {
 
 }
 
-    $(".movieClass").live('click', function () {
-        alert('you clicked me!');
-    });
+    
 
 
 
