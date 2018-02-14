@@ -80,7 +80,7 @@ function loadData() {
                
                 var hymn = $(this).attr("id");
                 //console.log("tris", hymn);
-                alert('you clicked me!' + hymn);
+                //alert('you clicked me!' + hymn);
 
                 window.location = "/Movie/EditMovie/"+ hymn;
             });

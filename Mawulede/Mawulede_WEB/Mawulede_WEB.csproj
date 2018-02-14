@@ -1050,6 +1050,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\app\booking\getBooking.js" />
     <Content Include="Scripts\app\dashboardHome.js" />
+    <Content Include="Scripts\app\movie\edit.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

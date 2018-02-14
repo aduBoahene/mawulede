@@ -36,20 +36,6 @@ function getBookingById(id) {
             }
 
            
-
-            /*
-            "BookingId": 1,
-        "Title": "Black Panther",
-        "FullName": "Kofi Ampabeng",
-        "BookingDate": "2017-04-05T00:00:00",
-        "HouseId": 2,
-        "PaymentName": "MOMO",
-        "Amount": "70",
-        "HouseName": "Global",
-        "Day": "Monday",
-        "Time": "10:00"
-
-            */
             
 
         }

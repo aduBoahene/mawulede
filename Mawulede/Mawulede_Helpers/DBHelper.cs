@@ -258,6 +258,41 @@ namespace Mawulede_Helpers
             }
         }
 
+        public List<Movie> GetMovieById(int HouseId,int MovieId)
+        {
+
+
+            var results = new List<Movie>();
+            var con = new NpgsqlConnection(_Ycon);
+            var cmd = new NpgsqlCommand("\"getmoviebyid\"", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new NpgsqlParameter("reqHouseId", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Parameters[0].Value = HouseId;
+
+            cmd.Parameters.Add(new NpgsqlParameter("reqMovieId", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Parameters[1].Value = MovieId;
+
+            con.Open(); var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                results.Add(new Movie
+                {
+
+                    MovieId = reader.GetFieldValue<int>(0),
+                    Title = reader.GetFieldValue<string>(1),
+                    GenreName = reader.GetFieldValue<string>(2),
+                    Synopsis = reader.GetFieldValue<string>(3),
+                    PosterUrl = reader.GetFieldValue<string>(4),
+                    TrailerUrl = reader.GetFieldValue<string>(5),
+                    Amount = reader.GetFieldValue<string>(6),
+                    ReleaseDate = reader.GetFieldValue<DateTime>(7)
+                });
+            }
+            con.Close(); con.Dispose();
+            return results;
+        }
+
 
     }
 }

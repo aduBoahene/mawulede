@@ -28,6 +28,26 @@ namespace Mawulede_API.Controllers
         }
 
         [HttpGet]
+        public List<Movie> GetMovieById(int houseId, int MovieId)
+        {
+            var results = new List<Movie>();
+            try
+            {
+                results = _helper.GetMovieById(houseId, MovieId);
+                if (results != null || results.Count > 0)
+                {
+                    return results;
+                }
+                else { return null; }
+
+            }
+            catch (Exception x)
+            {
+                return null;
+            }
+        }
+
+        [HttpGet]
         public List<Movie> GetAllMovie(int houseId)
         {
             var results = new List<Movie>();
