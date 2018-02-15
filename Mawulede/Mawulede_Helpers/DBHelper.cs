@@ -52,13 +52,15 @@ namespace Mawulede_Helpers
 
                 movie.Title = movie.Title;
                 movie.GenreId = movie.GenreId;
-                //movie.Synopsis = movie.Synopsis;
-
                 movie.Synopsis = movie.Synopsis;
                 movie.PosterUrl = movie.PosterUrl;
                 movie.TrailerUrl = movie.TrailerUrl;
                 movie.Amount = movie.Amount;
                 movie.HouseId = movie.HouseId;
+                movie.ReleaseDate = movie.ReleaseDate;
+                movie.CreatedBy = movie.CreatedBy;
+                movie.CreationDate = movie.CreationDate;
+                movie.UserId = movie.UserId;
 
                 var cmd = new NpgsqlCommand("\"submitmovie\"", con);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -84,7 +86,19 @@ namespace Mawulede_Helpers
                 cmd.Parameters.Add(new NpgsqlParameter("reqHouseId", NpgsqlTypes.NpgsqlDbType.Integer));
                 cmd.Parameters[6].Value = movie.HouseId;
 
-                
+                cmd.Parameters.Add(new NpgsqlParameter("reqReleaseDate", NpgsqlTypes.NpgsqlDbType.Date));
+                cmd.Parameters[7].Value = movie.ReleaseDate;
+
+                cmd.Parameters.Add(new NpgsqlParameter("reqCreatedBy", NpgsqlTypes.NpgsqlDbType.Varchar));
+                cmd.Parameters[8].Value = movie.CreatedBy;
+
+                cmd.Parameters.Add(new NpgsqlParameter("reqCreationDate", NpgsqlTypes.NpgsqlDbType.Date));
+                cmd.Parameters[9].Value = movie.CreationDate;
+
+                cmd.Parameters.Add(new NpgsqlParameter("reqUserId", NpgsqlTypes.NpgsqlDbType.Integer));
+                cmd.Parameters[10].Value = movie.UserId;
+
+
                 con.Open();
 
                 result = Convert.ToInt32(cmd.ExecuteScalar());
