@@ -18,7 +18,7 @@ namespace Mawulede_Models.Model
         public String Amount { get; set; }
         public int HouseId { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public string CreatedBy { get; set; }
+        public String CreatedBy { get; set; }
         public DateTime CreationDate { get; set; }
         public int UserId { get; set; }
     }

@@ -1051,6 +1051,7 @@
     <Content Include="Scripts\app\booking\getBooking.js" />
     <Content Include="Scripts\app\dashboardHome.js" />
     <Content Include="Scripts\app\movie\edit.js" />
+    <Content Include="Scripts\app\movie\view.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -1120,6 +1121,7 @@
     <Content Include="Views\Shared\_newLoginLayout.cshtml" />
     <Content Include="Views\Movie\AddMovie.cshtml" />
     <Content Include="Views\Movie\EditMovie.cshtml" />
+    <Content Include="Views\Movie\ViewMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
