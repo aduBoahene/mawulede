@@ -9,7 +9,7 @@ namespace Mawulede_Models.Model
         public int BookingId { get; set; }
         public String Title { get; set; }
         public String FullName { get; set; }
-        public DateTime BookingDate { get; set; }
+        public String BookingDate { get; set; }
         public int HouseId { get; set; }
         public String PaymentName { get; set; }
         public String Amount { get; set; }

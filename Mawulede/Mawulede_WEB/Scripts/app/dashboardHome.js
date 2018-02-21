@@ -63,12 +63,21 @@ function loadData() {
 
 
             for (var i = 0; i < Movie.length; i++) {
+
+                if (new Date() > Movie[i].ReleaseDate) {
+                    console.log("found not coming soon " + Movie[i].Title + " "+ Movie[i].ReleaseDate);
+                } else {
+                    console.log("found coming soon " + Movie[i].Title +" " + Movie[i].ReleaseDate);
+                }
+
                 outputMovie = outputMovie + "\
                     <div class='col-md-4 movieClass mag' id= '" + Movie[i].MovieId+"' >\
                         <img src="+ Movie[i].PosterUrl + " class='media-object' style='width:70px;height:90px'>\
                     </div>\
                     <div class='col-md-4 mag movieClass' style='margin-left:-240px'><h3>"+ Movie[i].Title + "</h3><p>" + Movie[i].Synopsis.substring(0, 100) + "</p>\
                 </div>";    
+
+                
 
                 $("#tab1primary").html(outputMovie);
             }
@@ -87,6 +96,8 @@ function loadData() {
 
           
             for (var i = 0; i < booking.length; i++) {
+                var tDate = new Date();
+                var bDate = new Date(booking[i].Date);
 
                 outputBooking = outputBooking + "<tr>\
                     <td>"+ booking[i].BookingNumber + "</a></td>\
@@ -101,6 +112,7 @@ function loadData() {
                 </tr>";
 
                 $("#bookingDetails").html(outputBooking);
+                
             }
 
 

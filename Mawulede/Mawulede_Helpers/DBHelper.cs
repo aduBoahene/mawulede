@@ -49,18 +49,7 @@ namespace Mawulede_Helpers
             using (var con = new NpgsqlConnection(_Ycon))
             {
                 int result;
-
-                movie.Title = movie.Title;
-                movie.GenreId = movie.GenreId;
-                movie.Synopsis = movie.Synopsis;
-                movie.PosterUrl = movie.PosterUrl;
-                movie.TrailerUrl = movie.TrailerUrl;
-                movie.Amount = movie.Amount;
-                movie.HouseId = movie.HouseId;
-                movie.ReleaseDate = movie.ReleaseDate;
-                movie.CreatedBy = movie.CreatedBy;
-                movie.CreationDate = movie.CreationDate;
-                movie.UserId = movie.UserId;
+                
 
                 var cmd = new NpgsqlCommand("\"submitmovie\"", con);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -194,7 +183,7 @@ namespace Mawulede_Helpers
                         BookingId = reader.GetFieldValue<int>(0),
                         Title = reader.GetFieldValue<string>(1),
                         FullName = reader.GetFieldValue<string>(2),
-                        BookingDate = reader.GetFieldValue<DateTime>(3),
+                        BookingDate = reader.GetFieldValue<DateTime>(3).ToString(),
                         HouseId = reader.GetFieldValue<int>(4),
                         PaymentName = reader.GetFieldValue<string>(5),
                         Amount = reader.GetFieldValue<string>(6),
